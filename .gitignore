@@ -147,3 +147,15 @@ apps/desktop/demo/
 # PR body is the archive. See the hermes-agent-dev skill's
 # pr-infographic-workflow reference (storage rule + lapse #8 / #COMMIT-1).
 infographic/
+
+# ── Fork-local (PrincessHermes / Railway) ────────────────────────────────
+# Production data pulled off the Railway volume: .env, .git-credentials,
+# .github_token, auth.json, state.db (full session history), OSINT result
+# files. This is a restore snapshot, not source — it must never enter git
+# history (private repo or not: a fork, a collaborator, or one `gh repo edit
+# --visibility public` is all it takes, and rewriting history to remove a
+# 166 MB tarball with live tokens is not a thing you want to do at 3am).
+railway_backup/
+
+# claude-flow session state — local scratch, not project source.
+.claude-flow/
