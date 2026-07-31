@@ -186,7 +186,15 @@ apps/desktop/demo/
 # the first line of defence and cannot stop `git add -f` at all — the
 # infographic-check CI job is what actually enforces this.
 infographic/
-<<<<<<< HEAD
+infographics/
+infograficos/
+infografico/
+native/fts5_cjk/*.so
+
+# Runtime marker written by hermes update when a lazy dependency refresh is
+# interrupted; consumed by launch-time recovery. Never commit it (was tracked
+# by accident via 3a69e34702, removed in the #72002 salvage).
+.lazy-refresh-incomplete
 
 # ── Fork-local (PrincessHermes / Railway) ────────────────────────────────
 # Production data pulled off the Railway volume: .env, .git-credentials,
@@ -199,9 +207,3 @@ railway_backup/
 
 # claude-flow session state — local scratch, not project source.
 .claude-flow/
-=======
-infographics/
-infograficos/
-infografico/
-native/fts5_cjk/*.so
->>>>>>> upstream/main
